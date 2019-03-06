@@ -1,0 +1,304 @@
+{
+  "interactionModel": {
+      "languageModel": {
+          "invocationName": "corner cafe",
+          "intents": [
+              {
+                  "name": "AMAZON.CancelIntent",
+                  "samples": []
+              },
+              {
+                  "name": "AMAZON.HelpIntent",
+                  "samples": []
+              },
+              {
+                  "name": "AMAZON.StopIntent",
+                  "samples": []
+              },
+              {
+                  "name": "AMAZON.NavigateHomeIntent",
+                  "samples": []
+              },
+              {
+                  "name": "OrderCoffeeIntent",
+                  "slots": [
+                      {
+                          "name": "sizeSlot",
+                          "type": "Size",
+                          "samples": [
+                              "i want a {sizeSlot} coffee",
+                              "{sizeSlot} please",
+                              "{sizeSlot} would work",
+                              "i want {sizeSlot}",
+                              "{sizeSlot}"
+                          ]
+                      },
+                      {
+                          "name": "typeSlot",
+                          "type": "Type",
+                          "samples": [
+                              "{typeSlot} please",
+                              "{typeSlot} would be great",
+                              "{typeSlot} would do",
+                              "{typeSlot}",
+                              "i want {typeSlot} coffee"
+                          ]
+                      }
+                  ],
+                  "samples": [
+                      "a coffee",
+                      "a coffee would be great ",
+                      "i want a {typeSlot} coffee",
+                      "i want a {sizeSlot} coffee",
+                      "order coffee",
+                      "get me a coffee",
+                      "i want to order coffee",
+                      "i want to order a {sizeSlot} {typeSlot} coffee",
+                      "coffee",
+                      "i would like a coffee"
+                  ]
+              },
+              {
+                  "name": "AskForSnacksIntent",
+                  "slots": [
+                      {
+                          "name": "snackSlot",
+                          "type": "snackType",
+                          "samples": [
+                              "a {snackSlot} please",
+                              "{snackSlot} please",
+                              "i want {snackSlot}",
+                              "some {snackSlot} will be great.",
+                              "some {snackSlot} please",
+                              "i would have some {snackSlot}",
+                              "{snackSlot}"
+                          ]
+                      }
+                  ],
+                  "samples": [
+                      "i would like {snackSlot} with my coffee",
+                      "i would like to have {snackSlot}",
+                      "i want to order {snackSlot}",
+                      "{snackSlot}",
+                      "i want {snackSlot}"
+                  ]
+              }
+          ],
+          "types": [
+              {
+                  "name": "Type",
+                  "values": [
+                      {
+                          "name": {
+                              "value": "cold",
+                              "synonyms": [
+                                  "warmed",
+                                  "colder",
+                                  "cooling",
+                                  "too cold",
+                                  "cooler"
+                              ]
+                          }
+                      },
+                      {
+                          "name": {
+                              "value": "hot",
+                              "synonyms": [
+                                  "hotter",
+                                  "warmer",
+                                  "warm"
+                              ]
+                          }
+                      }
+                  ]
+              },
+              {
+                  "name": "Size",
+                  "values": [
+                      {
+                          "name": {
+                              "value": "medium",
+                              "synonyms": [
+                                  "big enough",
+                                  "sizable",
+                                  "medium-sized"
+                              ]
+                          }
+                      },
+                      {
+                          "name": {
+                              "value": "large",
+                              "synonyms": [
+                                  "too big",
+                                  "enormous",
+                                  "sufficiently large",
+                                  "huge",
+                                  "largish",
+                                  "bigger",
+                                  "larger",
+                                  "large enough"
+                              ]
+                          }
+                      },
+                      {
+                          "name": {
+                              "value": "small",
+                              "synonyms": [
+                                  "smallest",
+                                  "small one",
+                                  "smallish",
+                                  "very small",
+                                  "smaller",
+                                  "be small",
+                                  "so small",
+                                  "tiny"
+                              ]
+                          }
+                      }
+                  ]
+              },
+              {
+                  "name": "snackType",
+                  "values": [
+                      {
+                          "name": {
+                              "value": "nothing",
+                              "synonyms": [
+                                  "nothing at all",
+                                  "none of these",
+                                  "none"
+                              ]
+                          }
+                      },
+                      {
+                          "name": {
+                              "value": "sandwitch",
+                              "synonyms": [
+                                  "cheese sandwich",
+                                  "sandwiches"
+                              ]
+                          }
+                      },
+                      {
+                          "name": {
+                              "value": "chips",
+                              "synonyms": [
+                                  "packet of chips",
+                                  "few chips"
+                              ]
+                          }
+                      },
+                      {
+                          "name": {
+                              "value": "french fries",
+                              "synonyms": [
+                                  "fries",
+                                  "some fries"
+                              ]
+                          }
+                      }
+                  ]
+              }
+          ]
+      },
+      "dialog": {
+          "intents": [
+              {
+                  "name": "OrderCoffeeIntent",
+                  "confirmationRequired": false,
+                  "prompts": {},
+                  "slots": [
+                      {
+                          "name": "sizeSlot",
+                          "type": "Size",
+                          "confirmationRequired": false,
+                          "elicitationRequired": true,
+                          "prompts": {
+                              "elicitation": "Elicit.Slot.795955237563.1107372602195"
+                          }
+                      },
+                      {
+                          "name": "typeSlot",
+                          "type": "Type",
+                          "confirmationRequired": false,
+                          "elicitationRequired": true,
+                          "prompts": {
+                              "elicitation": "Elicit.Slot.795955237563.462890550748"
+                          }
+                      }
+                  ]
+              },
+              {
+                  "name": "AskForSnacksIntent",
+                  "confirmationRequired": false,
+                  "prompts": {},
+                  "slots": [
+                      {
+                          "name": "snackSlot",
+                          "type": "snackType",
+                          "confirmationRequired": false,
+                          "elicitationRequired": true,
+                          "prompts": {
+                              "elicitation": "Elicit.Slot.114526204777.544519169091"
+                          }
+                      }
+                  ]
+              }
+          ],
+          "delegationStrategy": "ALWAYS"
+      },
+      "prompts": [
+          {
+              "id": "Elicit.Slot.795955237563.1107372602195",
+              "variations": [
+                  {
+                      "type": "PlainText",
+                      "value": "in what size do you want your {typeSlot} to be ?"
+                  },
+                  {
+                      "type": "PlainText",
+                      "value": "small, large or medium ?"
+                  },
+                  {
+                      "type": "PlainText",
+                      "value": "what size?"
+                  },
+                  {
+                      "type": "PlainText",
+                      "value": "What Size are you looking for?"
+                  }
+              ]
+          },
+          {
+              "id": "Elicit.Slot.795955237563.462890550748",
+              "variations": [
+                  {
+                      "type": "PlainText",
+                      "value": "{sizeSlot} coffe, how do you want it, cold or hot ?"
+                  },
+                  {
+                      "type": "PlainText",
+                      "value": "hot or cold?"
+                  },
+                  {
+                      "type": "PlainText",
+                      "value": "how do you want it, hot or cold?"
+                  }
+              ]
+          },
+          {
+              "id": "Elicit.Slot.114526204777.544519169091",
+              "variations": [
+                  {
+                      "type": "PlainText",
+                      "value": "What do want with it, sandwitch, chips or french fries ?"
+                  },
+                  {
+                      "type": "PlainText",
+                      "value": "What do want with it ?"
+                  }
+              ]
+          }
+      ]
+  }
+}
