@@ -172,7 +172,7 @@ const OrderCoffeeIntent_Handler = {
 
       return responseBuilder
         .speak("We have small, medium and large sizes to offer, Which One do you want?")
-        .reprompt("What would you like with you coffee?")
+        .reprompt("What size do you want, small, large or medium ?")
         .getResponse();
 
     }
